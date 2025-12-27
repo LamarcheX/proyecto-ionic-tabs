@@ -1,0 +1,7 @@
+{
+  "name": "proyecto-ionic-tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
