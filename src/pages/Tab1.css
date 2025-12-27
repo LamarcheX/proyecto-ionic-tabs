@@ -1,0 +1,254 @@
+/* Futuristic Title Styles */
+.futuristic-title {
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.terminal-symbol {
+  color: #22d3ee;
+  margin-right: 8px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.4;
+  }
+}
+
+/* Group Info Card */
+.group-info-card {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.2);
+}
+
+.card-title-futuristic {
+  color: #06b6d4;
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.info-item {
+  --background: rgba(51, 65, 85, 0.5);
+  --border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.label-small {
+  color: #06b6d4;
+  font-size: 0.65rem;
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.label-value {
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Status Indicators */
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.status-indicator-small {
+  width: 8px;
+  height: 8px;
+  background: #06b6d4;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #06b6d4;
+  animation: pulse-glow 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Members Container */
+.members-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Member Cards */
+.member-card {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 16px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.4);
+  border-color: rgba(6, 182, 212, 0.6);
+}
+
+/* Color Accents */
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.card-accent-danger {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+
+.card-accent-primary {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+}
+
+.card-accent-warning {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.card-accent-success {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+}
+
+/* Member Header */
+.member-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.member-icon {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.member-card:hover .member-icon {
+  transform: scale(1.15);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.member-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.detail-label {
+  color: #06b6d4;
+  font-size: 0.65rem;
+  font-family: "Courier New", monospace;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.detail-value {
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: "Courier New", monospace;
+}
+
+.role-badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .member-name {
+    font-size: 1rem;
+  }
+
+  .member-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member-card {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.member-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.member-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.member-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.member-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
